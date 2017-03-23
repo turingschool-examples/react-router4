@@ -5,6 +5,22 @@
 .App-header {
   background-color: #222;
   height: 150px;
-  padding: 20px;
   color: white;
+  padding: 20px 0;
+}
+
+.App-title {
+  font-size: 50px;
+}
+
+.navBar a {
+  margin: 5px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.selected {
+  color: blue !important;
+  font-weight: bold;
 }

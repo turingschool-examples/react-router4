@@ -3,9 +3,10 @@ import React, { Component } from 'react';
 export default class CreateIdea extends Component {
 
   render() {
+    console.log(this.props.match)
     return(
       <div>
-        Word 
+        {this.props.title}
       </div>
     );
   }
