@@ -8,7 +8,7 @@ tags:
 
 ### Goals
 
-By the end of this lesson, you will know/be able to:
+By the end of this lesson, you should be able to implement:
 
 * React Router 4
   * BrowserRouter
@@ -19,18 +19,16 @@ By the end of this lesson, you will know/be able to:
 By the end of today’s lesson, you should have a better idea of what React Router is, why it’s useful, and how to implement it into a React app.
 
 
-  Today we will start by going over the main React Router components and how to implement them in our small React App.
+  * Today we will start by going over the main React Router components and how to implement them in our small React App.
 
-  Then you will complete the application with a partner.
+  * Then you will complete the application with a partner.
 
-  Lastly we will do a little show and tell!
+  * Last but not least you will show off what you did!
 
   <!-- After we have completed the application we will checkout a new branch called `redux-router`
 
   We will then work together to set up `Redux's Provider` with `Router` -->
 
-
-<!-- // Review/Closing for React Router: Code call, more show and tell? Fist of five.-->
 
 ### Why Routing?
 
@@ -41,7 +39,7 @@ A simple answer is that we want to have a road map for our users. There's two ma
 * A user can't bookmark a specific part/view of our applications.
 * A user can't utilize the back and forward buttons on the browser.
 
-So those are two major UX flaws. So we're clearly here to fix that issue by learning React Router, but is there any other option?
+So those are two major UX flaws! Great news! We're here to fix them by learning React Router... but is there any other option?
 
 There is!.. If you hate yourself you could hand roll everything! It would look something like this:
 
@@ -103,11 +101,11 @@ NutShell: React Router helps keep the UI in sync with the URL by having componen
 
 
 #### Router
-There are multiple different types of Routers you can use. Just note that
+There are multiple different types of Routers you can use. Keep in mind that each routes have these two things in common:
 * The `Router` will contain all `Routes` inside.
-* That a single JSX element must be returned from it.
+* A single JSX element must be returned from it.
 
-The most common one you will use is `<BrowserRouter>` Important things to know:
+The most common one you will use is `<BrowserRouter>`. Things to know about `BrowserRouter`:
 * BrowserRouter uses HTML5 history API (pushState, replaceState and the popstate event) to keep your UI in sync with the URL.
 
 
@@ -133,19 +131,19 @@ class App extends Component {
 export default App;
 
 ```
-This will allow Router to be available to the rest of the components. Note that BrowserRouter has attributes you can utilize. Take a look for yourself to see if you'd need them. [BrowserRouter](https://reacttraining.com/react-router/web/api/BrowserRouter)
+This will allow `Router` to be available to the rest of the components. Note that `BrowserRouter` has attributes you can utilize. Take a look for yourself to see if you'd need them. [BrowserRouter](https://reacttraining.com/react-router/web/api/BrowserRouter)
 
 Lets go ahead and throw this in our Idea & Thought Box application.
 
 #### Route
 
-Route is what you'll use the most. The Route component will match it's path with the URL and display the correct component.
+`Route` is what you'll use the most. The `Route` component will match it's path with the URL and display the correct component.
 
-Route has:
+`Route`'s attributes:
 
 * `path` attribute takes a string and will render it's component when any valid URL is given to it. ex: `<Route path='/home' />`
 * `exact` attribute receives a boolean that will only render the component if the pathway matches exactly.
-* `component` attribute will render a single component givent to it. ex:
+* `component` attribute will render a single component given to it. ex: `<Route path='/home' component={Home} />`
 * `render` attribute takes a callback and must return a single JSX element.
 
 ``` javascript
@@ -214,8 +212,8 @@ This is great! We've displayed all of the things.. When we are on the correct ro
 
 #### Link & NavLink
 `Link` & `NavLink` is pretty simple to implement. Things to know:
-* Open and closing tags ex: <Link>Home</Link>
-* `to` attribute takes a string or an object and references the `route` path you'd like to go to,  ex: <Link to='/home'>
+* Open and closing tags ex: `<Link>Home</Link>`
+* `to` attribute takes a string or an object and references the `route` path you'd like to go to,  ex: `<Link to='/home'>`
 
 The main difference is that `NavLink` has attributes for being active: `activeClassName` & `activeStyle`.
 * `activeClassName` takes a string that references a CSS class name. This will add styling to the link when the URL matches the `to` path.
@@ -239,7 +237,7 @@ export const NavBar = () => {
 
 ```
 
-Now what if we want each Idea to have it's own link? Currently we would have to know each Idea's ID and create a `route` for each one! That sounds expensive. So lets talk about dynamic routing.
+Now what if we want each Idea to have it's own link? Currently we would need to know each Idea's ID and create a `route` for each one! That sounds expensive. So lets talk about dynamic routing.
 
 Consider this example:
 * `<Route path='/ideas/1'>`
