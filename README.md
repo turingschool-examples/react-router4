@@ -143,7 +143,7 @@ Lets go ahead and throw this in our Idea & Thought Box application.
 
 * `path` attribute takes a string and will render it's component when any valid URL is given to it. ex: `<Route path='/home' />`
 * `exact` attribute receives a boolean that will only render the component if the pathway matches exactly.
-* `component` attribute will render a single component givent to it. ex:
+* `component` attribute will render a single component given to it. ex: `<Route path='/home' component={Home} />`
 * `render` attribute takes a callback and must return a single JSX element.
 
 ``` javascript
