@@ -101,11 +101,11 @@ NutShell: React Router helps keep the UI in sync with the URL by having componen
 
 
 #### Router
-There are multiple different types of Routers you can use. Just note that
+There are multiple different types of Routers you can use. Keep in mind that each routes have these two things in common:
 * The `Router` will contain all `Routes` inside.
-* That a single JSX element must be returned from it.
+* A single JSX element must be returned from it.
 
-The most common one you will use is `<BrowserRouter>` Important things to know:
+The most common one you will use is `<BrowserRouter>`. Things to know about `BrowserRouter`:
 * BrowserRouter uses HTML5 history API (pushState, replaceState and the popstate event) to keep your UI in sync with the URL.
 
 
