@@ -39,7 +39,7 @@ A simple answer is that we want to have a road map for our users. There's two ma
 * A user can't bookmark a specific part/view of our applications.
 * A user can't utilize the back and forward buttons on the browser.
 
-So those are two major UX flaws. So we're clearly here to fix that issue by learning React Router, but is there any other option?
+So those are two major UX flaws! Great news! We're here to fix them by learning React Router... but is there any other option?
 
 There is!.. If you hate yourself you could hand roll everything! It would look something like this:
 
