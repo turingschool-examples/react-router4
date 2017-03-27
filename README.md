@@ -1,9 +1,3 @@
----
-title: React Router 4
-length:
-tags: Mod 3
----
-
 ## React Router
 
 ### Goals
