@@ -8,7 +8,7 @@ tags:
 
 ### Goals
 
-By the end of this lesson, you will know/be able to:
+By the end of this lesson, you should be able to implement:
 
 * React Router 4
   * BrowserRouter
