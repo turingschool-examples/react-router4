@@ -212,8 +212,8 @@ This is great! We've displayed all of the things.. When we are on the correct ro
 
 #### Link & NavLink
 `Link` & `NavLink` is pretty simple to implement. Things to know:
-* Open and closing tags ex: <Link>Home</Link>
-* `to` attribute takes a string or an object and references the `route` path you'd like to go to,  ex: <Link to='/home'>
+* Open and closing tags ex: `<Link>Home</Link>`
+* `to` attribute takes a string or an object and references the `route` path you'd like to go to,  ex: `<Link to='/home'>`
 
 The main difference is that `NavLink` has attributes for being active: `activeClassName` & `activeStyle`.
 * `activeClassName` takes a string that references a CSS class name. This will add styling to the link when the URL matches the `to` path.
@@ -237,7 +237,7 @@ export const NavBar = () => {
 
 ```
 
-Now what if we want each Idea to have it's own link? Currently we would have to know each Idea's ID and create a `route` for each one! That sounds expensive. So lets talk about dynamic routing.
+Now what if we want each Idea to have it's own link? Currently we would need to know each Idea's ID and create a `route` for each one! That sounds expensive. So lets talk about dynamic routing.
 
 Consider this example:
 * `<Route path='/ideas/1'>`
