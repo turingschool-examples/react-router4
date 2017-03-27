@@ -1,10 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-export const ListItem = ({ title, body, id, match }) => {
+export const ListItem = ({ title, body, id }) => {
   return (
     <div className='list-item'>
-      <Link to={`/${match.url.split('/')[1]}/${id}`}><h1>{title}</h1></Link>
+      <h1>{title}</h1>
       <p>{body}</p>
     </div>
   );
