@@ -9,6 +9,48 @@
   padding: 20px 0;
 }
 
+.intro ul {
+  list-style-type: none;
+  border-style: solid;
+  padding-left: 0px;
+}
+
+.intro li {
+  margin: 10px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.create-ideas {
+  font-size: 28px;
+  margin: 10px;
+}
+
+.create-ideas input, textarea {
+  width: 50%;
+  display: block;
+  margin: 10px 25%;
+  border-radius: 5px;
+}
+
+.create-ideas button {
+  width: 50%;
+  border-radius: 5px;
+  border-style: none;
+  background-color: grey;
+}
+
+.intro {
+  margin: 0 25%;
+  padding-top: 10px;
+}
+
+.list-item {
+  margin: 10px 50px;
+  background-color: white;
+  border-radius: 5px;
+}
+
 .App-title {
   font-size: 50px;
 }
