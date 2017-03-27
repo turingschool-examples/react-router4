@@ -19,18 +19,16 @@ By the end of this lesson, you should be able to implement:
 By the end of today’s lesson, you should have a better idea of what React Router is, why it’s useful, and how to implement it into a React app.
 
 
-  Today we will start by going over the main React Router components and how to implement them in our small React App.
+  * Today we will start by going over the main React Router components and how to implement them in our small React App.
 
-  Then you will complete the application with a partner.
+  * Then you will complete the application with a partner.
 
-  Lastly we will do a little show and tell!
+  * Last but not least you will show off what you did!
 
   <!-- After we have completed the application we will checkout a new branch called `redux-router`
 
   We will then work together to set up `Redux's Provider` with `Router` -->
 
-
-<!-- // Review/Closing for React Router: Code call, more show and tell? Fist of five.-->
 
 ### Why Routing?
 
