@@ -1,5 +1,5 @@
 ---
-title: 
+title:
 length:
 tags:
 ---
@@ -267,7 +267,7 @@ Here's what that might look like:
 
 ```
 Notice we used match.params.id to grab the id from the URL.
-match.params.[whatever] will always reference the dynamic name: `path='/ideas/:id'`
+match.params[whatever] will always reference the dynamic name: `path='/ideas/:id'`
 
 The Links to get here would look something like this:
 ```javascript
@@ -304,7 +304,3 @@ Things to implement:
 ### Slides
 
 * [Link to slides](https://docs.google.com/presentation/d/1JlPtY66qDYEuDrzyWyThgldeUdh7s8e9uJlwk4waURk/edit?usp=sharing)
-
-### Repository
-
-* [Link to optional repo]()
