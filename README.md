@@ -1,7 +1,7 @@
 ---
-title:
+title: React Router 4
 length:
-tags:
+tags: Mod 3
 ---
 
 ## React Router
