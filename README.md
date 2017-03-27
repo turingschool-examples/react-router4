@@ -131,15 +131,15 @@ class App extends Component {
 export default App;
 
 ```
-This will allow Router to be available to the rest of the components. Note that BrowserRouter has attributes you can utilize. Take a look for yourself to see if you'd need them. [BrowserRouter](https://reacttraining.com/react-router/web/api/BrowserRouter)
+This will allow `Router` to be available to the rest of the components. Note that `BrowserRouter` has attributes you can utilize. Take a look for yourself to see if you'd need them. [BrowserRouter](https://reacttraining.com/react-router/web/api/BrowserRouter)
 
 Lets go ahead and throw this in our Idea & Thought Box application.
 
 #### Route
 
-Route is what you'll use the most. The Route component will match it's path with the URL and display the correct component.
+`Route` is what you'll use the most. The `Route` component will match it's path with the URL and display the correct component.
 
-Route has:
+`Route`'s attributes:
 
 * `path` attribute takes a string and will render it's component when any valid URL is given to it. ex: `<Route path='/home' />`
 * `exact` attribute receives a boolean that will only render the component if the pathway matches exactly.
