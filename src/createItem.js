@@ -14,7 +14,7 @@ export default class CreateItem extends Component {
   }
 
   handleSubmit() {
-    this.props.submitForm(this.state);
+    this.props.addIdea(Object.assign(this.state, { id: Date.now() }) );
     this.setState({ title: '', body: '' });
   }
 
