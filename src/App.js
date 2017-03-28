@@ -1,15 +1,28 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Route } from 'react-router-dom';
-import CreateItemContainer from './createItemContainer.js';
+import CreateItem from './createItem.js';
 import { NavBar }from './navBar.js';
 import { Home }from './home.js';
-import ListItemContainer from './listItemContainer.js';
+import { ListItem } from './listItem.js';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      ideas: []
+    };
+  }
+
+  submitIdea(idea) {
+    const { ideas } = this.state;
+    ideas.push(Object.assign(idea, {id: Date.now()}))
+    this.setState({ideas: ideas});
+  }
+
 
   render() {
-    const { ideas } = this.props
+    const { ideas } = this.state
     return (
       <div className='App'>
         <div className='App-header'>
@@ -20,19 +33,19 @@ class App extends Component {
         <Route exact path='/' component={Home} />
 
         <Route exact path='/create-idea' render={({ match }) =>
-          <CreateItemContainer/>
+          <CreateItem submitForm={this.submitIdea.bind(this)}/>
         } />
 
         <Route exact path='/ideas' render={({ match }) =>
           <div className='list'>
-            {ideas.map((idea) => <ListItemContainer key={idea.id} {...idea}/>)}
+            {ideas.map((idea) => <ListItem key={idea.id} {...idea} />)}
           </div>
         } />
 
         <Route path='/ideas/:id' render={({ match }) => {
           const idea = ideas.find((idea) => idea.id === parseInt(match.params.id, 10));
           if (idea) {
-            return <ListItemContainer  {...idea} />;
+            return <ListItem {...idea} />;
           }
           return (<div className='list-item'>That Idea could not be found </div>)
         }} />
