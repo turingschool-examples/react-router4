@@ -5,8 +5,7 @@ import './index.css';
 import { Provider } from 'react-redux';
 import createHistory from 'history/createBrowserHistory'
 import { createStore, combineReducers, applyMiddleware } from 'redux';
-import { BrowserRouter } from 'react-router-dom';
-import { ConnectedRouter, routerReducer, routerMiddleware, push } from 'react-router-redux';
+import { ConnectedRouter, routerReducer, routerMiddleware } from 'react-router-redux';
 import * as reducers from './reducers.js';
 
 // Create a history of your choosing (we're using a browser history in this case)cd

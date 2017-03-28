@@ -2,10 +2,6 @@ import { connect } from 'react-redux';
 import * as actions from './actions.js';
 import CreateItem from './createItem.js';
 
-const mapStateToProps = (state) => {
-  return state;
-};
-
 const mapDispatchToProps = (dispatch) => {
   return {
     addIdea: (idea) => {
@@ -14,4 +10,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(CreateItem);
+export default connect(null, mapDispatchToProps)(CreateItem);

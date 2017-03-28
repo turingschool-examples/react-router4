@@ -4,3 +4,10 @@ export const addIdea = (idea) => {
     idea
   }
 }
+
+export const deleteIdea = (id) => {
+  return {
+    type: 'DELETE_IDEA',
+    id
+  }
+}
