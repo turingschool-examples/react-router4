@@ -1,11 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Item } from './item.js';
 
-export const ListItem = ({ title, body, id}) => {
+const ListItem = ({ items, deleteItem }) => {
   return (
-    <div className='list-item'>
-      <Link to={`/ideas/${id}`}><h1>{title}</h1></Link>
-      <p>{body}</p>
+    <div className='list-items'>
+      { items.map((item) => <Item key={item.id} {...item} deleteItem={deleteItem} />) }
     </div>
   );
 };
+
+export default ListItem

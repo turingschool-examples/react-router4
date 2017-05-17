@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Route } from 'react-router-dom';
-import CreateItemContainer from './createItemContainer.js';
+import CreateIdeaContainer from './createIdeaContainer.js';
+import CreateThoughtContainer from './createThoughtContainer.js';
 import { NavBar }from './navBar.js';
-import { Home }from './home.js';
-import{ ListItem} from './listItem.js';
+import { Home } from './home.js';
+import IdeaList from './listIdeaContainer.js';
+import ThoughtList from './listThoughtContainer.js';
+import { Item } from './item.js';
 
 class App extends Component {
 
   render() {
-    const { ideas } = this.props
+    const { ideas, thoughts, deleteIdea, deleteThought } = this.props
     return (
       <div className='App'>
         <div className='App-header'>
@@ -20,19 +23,29 @@ class App extends Component {
         <Route exact path='/' component={Home} />
 
         <Route exact path='/create-idea' render={({ match }) =>
-          <CreateItemContainer />
+          <CreateIdeaContainer />
         } />
 
-        <Route exact path='/ideas' render={({ match }) =>
-          <div className='list'>
-            {ideas.map((idea) => <ListItem key={idea.id} {...idea} />)}
-          </div>
+        <Route exact path='/create-thought' render={({ match }) =>
+          <CreateThoughtContainer />
         } />
+
+        <Route exact path='/ideas' component={IdeaList} />
+
+        <Route exact path='/thoughts' component={ThoughtList} />
 
         <Route path='/ideas/:id' render={({ match }) => {
           const idea = ideas.find((idea) => idea.id === parseInt(match.params.id, 10));
           if (idea) {
-            return <ListItem {...idea} />;
+            return <Item {...idea} deleteItem={deleteIdea}/>;
+          }
+          return (<div className='list-item'>That Idea could not be found </div>)
+        }} />
+
+        <Route path='/thoughts/:id' render={({ match }) => {
+          const thought = thoughts.find((thought) => thought.id === parseInt(match.params.id, 10));
+          if (thought) {
+            return <Item {...thought} deleteItem={deleteThought}/>;
           }
           return (<div className='list-item'>That Idea could not be found </div>)
         }} />

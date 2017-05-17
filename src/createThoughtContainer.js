@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
 import CreateItem from './createItem.js';
-
+import * as actions from './actions.js';
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    addIdea: (idea) => {
-      dispatch({ type: 'ADD_IDEA', idea: idea })
+    addIdea: (thought) => {
+      dispatch(actions.addThought(thought))
     }
   }
 }
