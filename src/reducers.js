@@ -1,11 +1,15 @@
-export const ideas = (state = [], action) => {
-  console.log('inside REDUCER');
+export const ideas = (state=[], action) => {
+  console.log('inside IDEAS REDUCER')
   switch (action.type) {
     case 'ADD_IDEA':
-      return [ ...state, action.idea ];
-    case 'DELETE_IDEA':
-      return state.filter((idea) => idea.id !== action.id);
+    return [...state, action.idea ];
+
     default:
       return state;
   }
+}
+
+export const favorites = (state=[], action) => {
+  console.log('inside FAVORITES REDUCER');
+  return state
 }

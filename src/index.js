@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import AppContainer from './appContainer.js';
 import './index.css';
 import createHistory from 'history/createBrowserHistory';
-
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import { ConnectedRouter, routerReducer, routerMiddleware } from 'react-router-redux';
