@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-scripts": "0.9.5"
+    "enzyme": "^2.8.2",
+    "react-addons-test-utils": "^15.5.1",
+    "react-scripts": "0.9.5",
+    "redux-mock-store": "^1.2.3"
   },
   "dependencies": {
     "history": "^4.6.1",
